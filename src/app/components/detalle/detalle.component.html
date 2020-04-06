@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="regresar()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ pelicula.title }}</ion-card-title>
+      <ion-card-subtitle>{{ pelicula.release_date }}</ion-card-subtitle>
+    </ion-card-header>  
+    <img [src] = "pelicula.poster_path | image">
+    <ion-card-content>
+      {{ pelicula.overview }}
+    </ion-card-content>
+    <ion-card-content>
+      Estado: {{ pelicula.status }} <br>
+      Popularidad: {{ pelicula.vote_average }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

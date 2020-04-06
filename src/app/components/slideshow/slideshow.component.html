@@ -1,0 +1,9 @@
+<ion-content [fullscreen]="true">
+  <ion-slides [options] = "slideop">
+    <ion-slide *ngFor="let item of peliculas">
+     <ion-card (click)="verDetalle( item.id )">
+       <img class="poster" [src] = "item.poster_path | image">
+     </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
